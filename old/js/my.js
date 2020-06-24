@@ -1,3 +1,5 @@
+const apiUri = "https://cors-anywhere.herokuapp.com/http://3.16.89.108:3000/api"
+
 //setDate
 let nowTimestamp = Date.now()
 let today = new Date(nowTimestamp)
@@ -9,7 +11,7 @@ $('#date').html(time)
 
 
 //set Whatsapp value on the right side
-const urlCountWhatsApp = "http://3.16.89.108:3000/api/calls/countWhatsApp"
+const urlCountWhatsApp = apiUri + "/calls/countWhatsApp"
 $.ajax({
     url: urlCountWhatsApp, 
     method: 'POST',
@@ -25,7 +27,7 @@ $.ajax({
 
 
 //set values on the rigth side
-const urlTodayCalls = "http://3.16.89.108:3000/api/calls/todayCalls"
+const urlTodayCalls = apiUri + "/calls/todayCalls"
 $.ajax({
     url: urlTodayCalls,
   method: 'POST',
@@ -54,7 +56,7 @@ $.ajax({
 
 
 //set week values for the bottom side
-const urlWeekCalls = "http://3.16.89.108:3000/api/calls/thisWeek"
+const urlWeekCalls = apiUri + "/calls/thisWeek"
 $.ajax({
     url: urlWeekCalls,
     method: 'POST',
@@ -149,7 +151,7 @@ btnNewCall.addEventListener('click', () =>{
 
     let btnAddCall = document.getElementById('btnAddCall')
     btnAddCall.addEventListener('click', () =>{
-        const url = "http://3.16.89.108:3000/api/calls/"
+        const url = apiUri + "/calls/"
 
         if ($('#newCustomerCheck').prop('checked')){
             newCustomer = 1
@@ -180,7 +182,7 @@ btnNewCall.addEventListener('click', () =>{
 
 let gotNewMessage = document.getElementById('gotNewMessage')
 gotNewMessage.addEventListener('click', () => {
-    const urlNewWhatsApp = "http://3.16.89.108:3000/api/calls/newWhatsApp"
+    const urlNewWhatsApp = apiUri + "/calls/newWhatsApp"
     const jsonNewWhatsApp = {"userID": userID}
 
     $.post(urlNewWhatsApp, jsonNewWhatsApp, function(data, status){
