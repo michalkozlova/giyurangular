@@ -6,10 +6,10 @@ const urlWASentMessages = apiUri + "/statistics/sentMessages"
 const urlWAReceivedMessages = apiUri + "/statistics/receivedMessages"
 
 
-const urlNewLeadsAllCalls = "http://3.16.89.108:3000/api/statistics/newForDates"
-const urlNewNotRelevantCalls = "http://3.16.89.108:3000/api/statistics/newNotRelevantForDates"
+const urlNewLeadsAllCalls = apiUri + "/statistics/newForDates"
+const urlNewNotRelevantCalls = apiUri + "/statistics/newNotRelevantForDates"
 
-const urlMeetings = "http://3.16.89.108:3000/api/meetings/getMeetingAmount"
+const urlMeetings = apiUri + "/meetings/getMeetingAmount"
 
 
 let severalTimeAgo = 1577570400000
