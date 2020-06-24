@@ -1,7 +1,9 @@
-const urlAllCalls = "http://3.16.89.108:3000/api/statistics/fullForDates"
-const urlNotRelevantCalls = "http://3.16.89.108:3000/api/statistics/notRelevantForDates"
-const urlWASentMessages = "http://3.16.89.108:3000/api/statistics/sentMessages"
-const urlWAReceivedMessages = "http://3.16.89.108:3000/api/statistics/receivedMessages"
+const apiUri = "https://cors-anywhere.herokuapp.com/http://3.16.89.108:3000/api"
+
+const urlAllCalls = apiUri + "/statistics/fullForDates"
+const urlNotRelevantCalls = apiUri + "/statistics/notRelevantForDates"
+const urlWASentMessages = apiUri + "/statistics/sentMessages"
+const urlWAReceivedMessages = apiUri + "/statistics/receivedMessages"
 
 
 const urlNewLeadsAllCalls = "http://3.16.89.108:3000/api/statistics/newForDates"
