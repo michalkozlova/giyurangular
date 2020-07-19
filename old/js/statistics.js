@@ -1,4 +1,4 @@
-const apiUri = "https://cors-anywhere.herokuapp.com/http://3.16.89.108:3000/api"
+const apiUri = "https://cors-anywhere.herokuapp.com/http://18.191.59.149:3000/api"
 
 const urlAllCalls = apiUri + "/statistics/fullForDates"
 const urlNotRelevantCalls = apiUri + "/statistics/notRelevantForDates"
